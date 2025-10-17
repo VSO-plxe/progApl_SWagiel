@@ -112,4 +112,29 @@
     } else {
         echo "0 results <br>";
     }
+
+    // Usuwanie rekordu z tabeli
+    $sql = "DELETE FROM MyGuests WHERE id=3;";
+    if (mysqli_query($conn, $sql)) {
+        echo "Record deleted successfully <br>";
+    } else {
+        echo "Error deleting record: " . mysqli_error($conn) . "<br>";
+    }
+
+    // Aktualizowanie rekordu w tabeli
+    $sql = "UPDATE MyGuests SET lastname='Smith' WHERE id=2;";
+    if (mysqli_query($conn, $sql)) {
+        echo "Record updated successfully <br>";
+    } else {
+        echo "Error updating record: " . mysqli_error($conn) . "<br>";
+    }
+
+    // Limit - pobieranie pierwszych 2 rekordów
+    $sql = "SELECT * FROM MyGuests LIMIT 2;";
+
+    // Limit - pobieranie rekordów od 13 do 15
+    $sql = "SELECT * FROM MyGuests LIMIT 3 OFFSET 12;";
+
+    // Zamknięcie połączenia
+    mysqli_close($conn);
 ?>
