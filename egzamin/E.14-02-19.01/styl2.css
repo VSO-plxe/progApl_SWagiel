@@ -1,0 +1,70 @@
+* {
+    font-family: Georgia;
+}
+
+body {
+    margin: 0;
+}
+
+#banner {
+    background-color: #824555;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+}
+
+#panel1, #panel2 {
+    background-color: #A26475;
+    color: #fff;
+    width: 30%;
+    height: 300px;
+    float: left;
+}
+
+#panel3 {
+    background-color: #A26475;
+    color: #fff;
+    width: 40%;
+    height: 300px;
+    text-align: right;
+    float: left;
+}
+
+main {
+    background-color: #F0EAE2;
+    padding: 50px;
+    clear: both;
+}
+
+footer {
+    background-color: #824555;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+table, th, td {
+    border: 2px solid #69293A;
+    padding: 7px;
+    border-collapse: collapse;    
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+button#r {
+    background-color: red;
+    height: 15px;
+}
+
+button#g {
+    background-color: green;
+    height: 15px;
+}
+
+button#b {
+    background-color: blue;
+    height: 15px;
+}
