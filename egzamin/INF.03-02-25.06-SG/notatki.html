@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Planer zadań</title>
+        <link rel="stylesheet" href="styl.css">
+    </head>
+    <body>
+        <section id="bok">
+            <img src="obraz.jpg" alt="notatki">
+        </section>
+        <section id="mergeSections">
+            <header id="naglowek">
+                <h2>Moje zadania</h2>
+            </header>
+            <nav id="nawigacja">
+                <input type="text" placeholder="Dodaj zadanie...">
+                <button type="submit" onclick="dodajZadanie()">Dodaj</button>
+            </nav>
+            <main id="glowny">
+                <ul>
+                    <li>Wyprowadzić psa <button type="button" onclick="oznaczWykonane(this)">Wykonane</button></li>
+                    <li>Gimnastyka <button type="button" onclick="oznaczWykonane(this)">Wykonane</button></li>
+                    <li>Zakupy <button type="button" onclick="oznaczWykonane(this)">Wykonane</button></li>
+                    <li>Spacer z kumplem <button type="button" onclick="oznaczWykonane(this)">Wykonane</button></li>
+                    <li>Odrabianie lekcji z młodszą siostrą <button type="button" onclick="oznaczWykonane(this)">Wykonane</button></li>
+                    <li>Projekt na geografię <button type="button" onclick="oznaczWykonane(this)">Wykonane</button></li>
+                </ul>
+            </main>
+            <footer id="stopka">
+                <h3>Notatki: Sebastian</h3>
+            </footer>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>
