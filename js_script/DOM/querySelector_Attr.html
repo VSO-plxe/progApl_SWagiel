@@ -1,0 +1,8 @@
+<h1>Nagłówek pierwszy</h1>
+<h1 data="Wartość attrybutu">Nagłówek drugi</h1>
+
+<script>
+    const test = document.querySelector("[data]");  // Wyszuka pierwszy element z atrybutem data
+    console.log(test);
+    console.log(test.getAttribute("data"));     // Pobranie wartości atrybutu data - wynik = "Wartość attrybutu"
+</script>

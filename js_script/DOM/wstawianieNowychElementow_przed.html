@@ -1,0 +1,11 @@
+<body>
+</body>
+<script>
+    let container = document.createElement("div");
+    let p = document.createElement("p");
+    container.appendChild(p);
+    let span = document.createElement("span");
+    p.before(span);                     // Wstawienie elementu span przed element p
+    console.log(container.outerHTML);   // "<div><span></span><p></p></div>"
+    document.body.appendChild(container);
+</script>
