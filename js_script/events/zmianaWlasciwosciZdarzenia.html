@@ -1,0 +1,10 @@
+<!-- przykładowe użycie zdarzeń onclick oraz ondblclick (podwójne kliknięcie) -->
+<h1 onclick="this.innerHTML = 'Nowy tekst'">Kliknij na tekst</h1>
+
+<h1 onDblClick="zmienTekst(this);">Kliknij dwukrotnie na tekst</h1>
+
+<script>
+    function zmienTekst(tekst2) {
+        tekst2.innerHTML = 'Nowy tekst po dwukrotnym kliknięciu';
+    }
+</script>
