@@ -1,0 +1,13 @@
+<p id="licznik"></p>
+<script>
+    function licznik() {
+        let liczba = document.getElementById("licznik").innerHTML;
+        liczba = parseInt(liczba, 10) || 0;
+        if (liczba >= 10) {
+            liczba = 0;
+        }
+        liczba++;
+        document.getElementById("licznik").innerHTML = liczba;
+    }
+    setInterval(licznik, 1000);
+</script>
