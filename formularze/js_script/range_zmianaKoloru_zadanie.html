@@ -1,0 +1,31 @@
+<form action="">
+    <label>Zmień kolor: <br> 0
+        <input type="range" min="0" max="255" id="zakres">255
+    </label>
+</form>
+<p id="wynik"></p>
+
+<script>
+    let zakres = document.querySelector('#zakres');
+    zakres.addEventListener('change', function wybierzZakres() {
+        document.querySelector('#wynik').innerHTML = `<span style="color: rgb(${zakres.value}, 0, 0)">Kolor RGB(${zakres.value}, 0, 0)</span>`;
+    });
+</script>
+
+<!-- wariant 2 -->
+<p>Wariant 2</p>
+<form action="">
+    <label>Zmień kolor: <br> 0
+        <input type="range" min="0" max="255" id="zakres2">255
+    </label>
+</form>
+<div>div</div>
+
+<script>
+    let zakres2 = document.querySelector('#zakres2');
+    zakres2.addEventListener('change', wybierzZakres2);
+    let div = document.querySelector('div');
+    function wybierzZakres2() {
+        div.style.background = `rgb(${zakres2.value}, 0, 0)`;
+    }
+</script>

@@ -1,0 +1,13 @@
+<form action="">
+    <label>Ustaw wartość liczbową: <br> 1
+        <input type="range" min="1" max="100" id="zakres">100
+    </label>
+</form>
+<p id="wynik"></p>
+
+<script>
+    let zakres = document.querySelector('#zakres');
+    zakres.addEventListener('change', function wybierzZakres() {
+        document.querySelector('#wynik').innerHTML = zakres.value;
+    });
+</script>

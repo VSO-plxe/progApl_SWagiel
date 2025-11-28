@@ -1,0 +1,24 @@
+<h3>Kontrola adresu mailowego</h3>
+
+<form action="write2dB" method="post">
+    <label for="fname">Podaj adres e-mail</label>
+    <input type="text" name="fname" id="mail">
+    <input type="submit" value="Wyślij" id="sendMail">
+</form>
+<p id="wynik"></p>
+
+<script>
+    document.querySelector('#sendMail').addEventListener('click', chechMail);
+    function chechMail(event) {
+        var mailText = document.querySelector('#mail').value;
+        var regMail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let position = mailText.search(regMail);
+        document.querySelector('#wynik').innerHTML = position;
+        if (position === 0) {
+            document.querySelector('#wynik').innerHTML = "Adres e-mail jest poprawny";
+        } else {
+            document.querySelector('#wynik').innerHTML = "Adres e-mail jest niepoprawny";
+        }
+        event.preventDefault();
+    }
+</script>

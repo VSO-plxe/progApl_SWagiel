@@ -1,0 +1,23 @@
+<form>
+    <label>Podaj liczbę
+        <input type="number" id="num">
+        <button id="myButton">Wyślij</button>
+    </label>
+</form>
+<p id="info"></p>
+
+<script>
+    document.querySelector('#myButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        const MIN = 0;
+        const MAX = 10;
+        var result;
+        var num = document.querySelector('#num').value;
+        if (num != '' && num >= MIN && num <= MAX) {
+            result = "Dane są poprawne.";
+        } else {
+            result = "Dane są niepoprawne.";
+        }
+        document.querySelector('#info').innerHTML = result;
+    });
+</script>
